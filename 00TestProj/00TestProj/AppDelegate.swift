@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch result {
             case .succeess(let data):
                 self.dataStorage.save(value: data.data?.profile, key: UserDefaultStorageKeys.profile)
-            case error(let error):
+            case .failure(let error):
                 print("[Api] \(error)")
             }
         }
